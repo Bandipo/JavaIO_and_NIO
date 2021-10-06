@@ -12,8 +12,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.logging.Logger;
 
-
-public class FilesUtils {
+//the class is made final since it is just a helperClass. Therefore, it can't be extended
+public final class FilesUtils {
 
     private final static Logger logger = Logger.getLogger(FilesUtils.class.getName());
 
