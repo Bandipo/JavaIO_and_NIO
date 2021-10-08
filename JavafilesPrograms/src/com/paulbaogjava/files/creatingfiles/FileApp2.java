@@ -19,6 +19,8 @@ public class FileApp2 {
 
         FileCreatorUtility.createAFile(path1);
 
+        FileCreatorUtility.createAFile(Paths.get(FILE_PATH+"thermopylae.txt"));
+
 
 
 
