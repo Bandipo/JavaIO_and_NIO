@@ -7,6 +7,8 @@ public class JavaInputStreamExample {
       String fileName = "src/resources/thermopylae.txt";
 
       InputStreamExampleUtility.readAFile(fileName);
+      final String imageFile = "src/resources/ball.png";
+      InputStreamExampleUtility.readAnImage(imageFile);
 
     }
 }

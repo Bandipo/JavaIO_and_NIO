@@ -30,4 +30,33 @@ public final class InputStreamExampleUtility {
            LOGGER.warning(e.getMessage());
         }
     }
+
+    static void readAnImage(final String imagePath){
+
+         try(final InputStream inputStream = new FileInputStream(imagePath)){
+
+             int available = inputStream.available(); //returns number of bytes that can be read
+             byte[] buffer = new byte[available];
+
+             inputStream.read(buffer); // reads the bytes into the buffer
+
+             int i = 0;
+
+             for(byte b : buffer){
+                 if( i%20 == 0){
+                     System.out.println();
+                 }
+
+                 System.out.printf("%02x", b);
+
+                 i++;
+             }
+
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+
+
+
+    }
 }
