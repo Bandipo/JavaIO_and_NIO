@@ -4,11 +4,24 @@ public class JavaInputStreamExample {
 
     public static void main(String[] args) {
 
-      String fileName = "src/resources/thermopylae.txt";
 
+        //Reading a file
+      String fileName = "src/resources/thermopylae.txt";
       InputStreamExampleUtility.readAFile(fileName);
-      final String imageFile = "src/resources/ball.png";
-      InputStreamExampleUtility.readAnImage(imageFile);
+
+      //Reading an image
+//       String imageFile = "src/resources/ball.png";
+//      InputStreamExampleUtility.readAnImage(imageFile);
+
+      //Reading a Url
+
+        String website = "https://zetcode.com/java/inputstream/";
+
+
+
+        InputStreamExampleUtility.readAUrl(website);
+
+
 
     }
 }

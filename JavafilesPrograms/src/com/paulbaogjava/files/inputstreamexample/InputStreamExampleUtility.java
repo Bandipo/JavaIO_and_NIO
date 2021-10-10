@@ -1,8 +1,9 @@
 package com.paulbaogjava.files.inputstreamexample;
 
 import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -11,7 +12,7 @@ public final class InputStreamExampleUtility {
 
     private final static Logger LOGGER = Logger.getLogger(InputStreamExampleUtility.class.getName());
 
-     static void readAFile(String filePathInString){
+    static void readAFile(final String filePathInString){
 
 
         try(InputStream fis = new FileInputStream(filePathInString);
@@ -32,6 +33,7 @@ public final class InputStreamExampleUtility {
     }
 
     static void readAnImage(final String imagePath){
+
 
          try(final InputStream inputStream = new FileInputStream(imagePath)){
 
@@ -57,6 +59,28 @@ public final class InputStreamExampleUtility {
          }
 
 
+
+    }
+
+    static void readAUrl(final String website){
+
+        URL url = null;
+        try {
+            url = new URL(website);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        if (url != null) {
+            try( InputStream inputStream = url.openStream();
+                  BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+
+                br.lines().forEach(System.out::println);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 }
