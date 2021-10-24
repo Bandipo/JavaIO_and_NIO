@@ -40,6 +40,7 @@ public final  class  FileReaderUtils {
 
             while((line = bf.readLine()) != null){ //The readLine reads a line of text
 
+                if(line.isEmpty()) continue;
                 System.out.println(line);
             }
 

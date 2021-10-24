@@ -46,7 +46,7 @@ public class WordCount {
     }
 
     private void wordCount(String[] splitString) {
-
+          if(splitString == null) throw new NullPointerException("array is null");
         for(String element : splitString){
 
            final String word = element.trim();

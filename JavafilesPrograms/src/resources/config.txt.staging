@@ -1,0 +1,14 @@
+dbname=sq04_db
+host=127.0.0.1
+
+[application]
+name=fintek-staging
+port=8081
+context-url=/api/v1
+
+mode=staging
+theme=blue
+pipeline=fast-staging
+
+[application]
+name=fintrack-staging

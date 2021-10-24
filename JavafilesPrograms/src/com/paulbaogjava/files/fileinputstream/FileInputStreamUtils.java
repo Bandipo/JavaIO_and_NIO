@@ -62,14 +62,15 @@ public final  class FileInputStreamUtils {
     public static void readFileUsingBufferedReader(final String fileName){
         throwFileNotFoundException(fileName);
 
+
+
         try(final FileInputStream fis = new FileInputStream(fileName);
             final BufferedReader bf = new BufferedReader(new InputStreamReader(fis))){
+
 
             bf.lines().forEach(System.out::println);
 
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

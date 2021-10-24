@@ -1,0 +1,15 @@
+dbname=sq04_db-development
+host=127.0.0.1
+
+
+[application]
+name=fintek-development
+port=8082
+context-url=/api/v1
+
+mode=development
+theme=yellow
+pipeline=fast-development
+
+[application]
+name=fintrack-development
